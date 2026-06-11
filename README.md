@@ -2,7 +2,7 @@
 
 A Moore FSM-based Verilog project that simulates a smart parking garage controller with ticket issuance, ticket validation, payment-gated exit, occupancy tracking, and error handling.
 
-## Project Overview
+## Overview
 
 This project models a parking garage system with:
 
@@ -17,36 +17,36 @@ This project models a parking garage system with:
 - alarm signaling
 - admin override that behaves like a full system reset
 
-The design is split into multiple Verilog modules to keep the control logic and data logic organized.
+The design is split into multiple Verilog modules to keep control logic and data handling organized.
 
-## Features
+## Highlights
 
 - **Moore FSM control** for clean state-based behavior
-- **Ticket manager** for issuing and validating tickets
-- **Occupancy counter** for tracking current cars and remaining spaces
-- **Full garage detection** when capacity reaches 100
-- **Exit payment verification** before allowing a car to leave
-- **Alarm path** for invalid or reused tickets
-- **Admin override reset** to clear the system immediately
+- **Modular Verilog design** with separate controller, ticket manager, and occupancy counter
+- **Ticket lifecycle handling** from issuance to reuse prevention
+- **Payment-gated exit flow** before gate release
+- **Occupancy accounting** with remaining-space tracking
+- **Error handling** for invalid and reused tickets
+- **Waveform-based verification** in GTKWave with scenario-driven testbench coverage
 
 ## Module Breakdown
 
 ### `parking_garage_top`
-Top-level module that connects all submodules together.
+Top-level module that connects all submodules.
 
 ### `parking_controller_fsm`
 Main Moore FSM controller for:
 - entry sequence
 - exit sequence
 - payment wait
-- alarm/full handling
+- full/alarm handling
 
 ### `ticket_manager`
 Handles:
 - issuing new ticket IDs
 - storing issued tickets
 - tracking used tickets
-- continuously reporting whether a scanned ticket is valid
+- reporting whether a scanned ticket is valid
 
 ### `occupancy_counter`
 Handles:
@@ -103,7 +103,6 @@ Handles:
 ## Testbench Coverage
 
 The testbench verifies:
-
 - reset behavior
 - successful entry
 - successful valid exit
