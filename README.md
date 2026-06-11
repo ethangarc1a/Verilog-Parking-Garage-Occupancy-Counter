@@ -115,12 +115,8 @@ The testbench verifies:
 ### Successful Entry / Occupancy Update
 This waveform shows the FSM progressing through the normal entry path, issuing a ticket, opening/closing the entry gate, and updating occupancy from 0 to 1.
 
-![Successful entry waveform](assets/waveform_success.png)
-
 ### Invalid / Reused Ticket Error Path
 This waveform shows the controller rejecting a bad ticket and asserting the alarm path.
-
-![Error path waveform](assets/waveform_error_path.png)
 
 ## How to Run
 
