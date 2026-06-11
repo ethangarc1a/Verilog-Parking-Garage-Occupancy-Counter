@@ -130,10 +130,10 @@ Typical flow:
 ## File Structure
 
 ```text
-.
-├── main.v
-├── tb_parking_garage.v
+
 ├── assets
 │   ├── waveform_success.png
-│   └── waveform_error_path.png
-└── README.md
+│   └── waveform_error_path.png tb_parking_garage.v
+├── main.v
+├── tb_main.v
+├── README.md
