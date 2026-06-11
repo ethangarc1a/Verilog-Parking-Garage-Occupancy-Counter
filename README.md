@@ -134,6 +134,6 @@ Typical flow:
 ├── assets
 │   ├── waveform_success.png
 │   └── waveform_error_path.png tb_parking_garage.v
+├── README.md
 ├── main.v
 ├── tb_main.v
-├── README.md
