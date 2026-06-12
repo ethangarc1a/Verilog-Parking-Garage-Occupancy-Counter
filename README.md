@@ -21,13 +21,9 @@ The design is split into multiple Verilog modules to keep control logic and data
 
 ## Highlights
 
-- **Moore FSM control** for clean state-based behavior
-- **Modular Verilog design** with separate controller, ticket manager, and occupancy counter
-- **Ticket lifecycle handling** from issuance to reuse prevention
-- **Payment-gated exit flow** before gate release
-- **Occupancy accounting** with remaining-space tracking
-- **Error handling** for invalid and reused tickets
-- **Waveform-based verification** in GTKWave with scenario-driven testbench coverage
+- Designed a 21-state Moore FSM in Verilog coordinating ticket issuance, occupancy tracking, gate sequencing, payment, and alarm handling across a 100-car parking garage model.
+- Built a self-driving testbench in Icarus Verilog covering five scenarios including adversarial cases (never-issued ticket, reused ticket, admin override).
+- Verified end-to-end behavior with GTKWave waveform inspection, capturing signal traces that prove correct sequencing, error detection, and reset recovery.
 
 ## Module Breakdown
 
